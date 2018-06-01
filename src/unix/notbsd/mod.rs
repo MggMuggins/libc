@@ -193,6 +193,15 @@ s! {
         pub ifa_ifu: *mut ::sockaddr, // FIXME This should be a union
         pub ifa_data: *mut ::c_void
     }
+
+    pub struct ifmap {
+        pub mem_start: ::c_ulong,
+        pub mem_end: ::c_ulong,
+        pub base_addr: ::c_ushort,
+        pub irq: ::c_uchar,
+        pub dma: ::c_uchar,
+        pub port: ::c_uchar,
+    }
 }
 
 // intentionally not public, only used for fd_set
